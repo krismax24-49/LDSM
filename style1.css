@@ -1,0 +1,201 @@
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .hamburger {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 100;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    .hamburger .line {
+      width: 30px;
+      height: 2px;
+      background: #333;
+      display: block;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+
+    .nav-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 250px;
+      height: 100vh;
+      background: white;
+      padding: 80px 20px;
+      box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+      transition: 0.4s;
+    }
+
+    .nav-menu.active {
+      right: 0;
+    }
+
+    .nav-menu ul {
+      list-style: none;
+    }
+
+    .nav-menu li {
+      margin: 15px 0;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #333;
+      font-size: 1.1rem;
+    }
+
+    .hamburger.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active .line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px);
+    }
+body {
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*background-attachment: fixed;*/
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    /*background-color: #00edb9f9;*/
+    /*border: 1px solid #ddd;*/
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.logo {
+  width: 8rem;
+  display: flex;
+  margin: auto;
+  border-radius: 55px;
+  border: 2px solid white;
+}
+#myTitle{
+  margin: 0 auto;
+  text-align: center;
+}
+.container {
+  margin: 4px auto;
+  padding: 5px 8px;
+  max-width: 800px;
+}
+
+.description {
+    margin-bottom: 40px;
+}
+
+.strength ul, .whyJoin ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+details {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  border: 0;
+  padding: 10px;
+  background-color: transparent;
+  transition: all 0.5s ease-in-out;
+}
+
+details[open] {
+  background-color: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: open-details 0.5s ease-in-out;
+}
+
+@keyframes open-details {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 00.3s ease-in-out;
+}
+
+details summary:hover {
+  color: #0eded0;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+details[open] summary {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    border-radius: 30px;
+    bottom: 0;
+    width: 100%;
+    padding: 1px;
+    text-align: center;
+    clear: both;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.whyJoin {
+    margin-top: 40px;
+}
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: transparent;
+}
+a {
+  color: #fff;
+}
+.social-links {
+    margin: 15px 0;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: opacity 0.3s ease;
+}
+
+.social-links a:hover {
+    opacity: 0.8;
+}
+#author {
+  color: rgb(17, 61, 112);
+  text-align: center;
+  transform: translateY(35rem);
+  font-family: Algerian, ink-free, serif;
+}
